@@ -1,12 +1,8 @@
+
 #include <stdio.h>
 
-#define MAX_SIZE 100
-
 void addElementAtIndex(int array[], int size, int index, int element) {
-    if (size >= MAX_SIZE) {
-        printf("Array is full. Cannot add more elements.\n");
-        return;
-    }
+  
     
     if (index < 0 || index > size) {
         printf("Invalid index.\n");
@@ -31,10 +27,10 @@ void addElementAtIndex(int array[], int size, int index, int element) {
 }
 
 int main() {
-    int arr[MAX_SIZE];
     int size; // Current size of the array
     printf("enter size of array: ");
     scanf("%d",&size);
+    int arr[size];
     for(int i=0;i<size;i++){
         printf("enter your array inputs: arr[%d] ",i);
         scanf("%d",&arr[i]);
